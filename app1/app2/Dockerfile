@@ -24,4 +24,9 @@ RUN echo '<Directory /var/www/html>' >> /etc/apache2/apache2.conf && \
     echo 'Require All granted » /etc/apachez/apache2. conf 8& \ 
     echo '</Directory> » /etc/apache2/apache2. conf
 
+
 # Expõe a porta corretamente
+EXPOSE ${PORT}
+
+#INICIA o apache
+CMD ["apache2-foreground"]
